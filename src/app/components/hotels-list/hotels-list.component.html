@@ -1,0 +1,52 @@
+<section id="search-hotel">
+  <div class="search-input">
+    <!-- <input
+      type="text"
+      name=""
+      id="country"
+      placeholder="Pays de destination ?"
+      [(ngModel)]="hotelFilterCountry"
+    /> -->
+    <input
+      type="text"
+      name=""
+      id="location"
+      placeholder="Votre ville de destination ?"
+      [(ngModel)]="hotelFilter"
+    />
+    <select name="" id="number-person" [(ngModel)]="numberVoyagers">
+      <option value="">Nbre de voyageur</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+  </div>
+  <div class="title" *ngIf="hotels == filteredHotels; else filter">
+    Nous avons {{ hotels.length }} hôtels disponibles :
+  </div>
+  <ng-template #filter>
+    <div class="title" *ngIf="filteredHotels.length != 0; else noResponse">
+      Nous avons {{ filteredHotels.length }} hôtels disponibles pour :
+      {{ hotelFilter }}
+
+      {{ numberVoyagers }}
+    </div>
+  </ng-template>
+</section>
+
+<section id="container-hotels-list">
+  <app-hotels-list-model
+    *ngFor="let hotel of filteredHotels"
+    [hotel]="hotel"
+  ></app-hotels-list-model>
+</section>
+
+<ng-template #noResponse>
+  <h2 class="no-response">
+    Nous sommes désolé, nous n'avons aucun hôtel correspondant à vos critères
+    ...
+  </h2>
+</ng-template>
+
+<app-footer></app-footer>

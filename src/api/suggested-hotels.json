@@ -1,0 +1,29 @@
+[
+  {
+    "hotelId": 1,
+    "hotelName": "Ibiza Hotel",
+    "location": "Ibiza",
+    "description": "",
+    "numberPersons": "2",
+    "pricePerNight": "200",
+    "imageUrl": "../../../assets/hotel/1.png"
+  },
+  {
+    "hotelId": 2,
+    "hotelName": "Repos Hotel",
+    "location": "Madrid",
+    "description": "",
+    "numberPersons": "1",
+    "pricePerNight": "250",
+    "imageUrl": "../../../assets/hotel/2.jpg"
+  },
+  {
+    "hotelId": 3,
+    "hotelName": "Hotel Carlton",
+    "location": "New-York City",
+    "description": "",
+    "numberPersons": "2",
+    "pricePerNight": "250",
+    "imageUrl": "../../../assets/hotel/3.jpg"
+  }
+]

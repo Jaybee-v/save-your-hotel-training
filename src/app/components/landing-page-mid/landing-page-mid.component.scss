@@ -1,0 +1,109 @@
+section#mid-page {
+  width: 100%;
+  position: absolute;
+  top: 523px;
+  border-top: 2px solid #59606d;
+  border-bottom: 2px solid #59606d;
+  .mid-title {
+    border-right: 2px solid #59606d;
+    width: fit-content;
+    h2 {
+      font-family: "Alex Brush", cursive;
+
+      width: 550px;
+      padding: 50px 140px;
+      font-size: 39px;
+      color: #70acb1;
+    }
+  }
+  .mid-text {
+    position: absolute;
+    width: 730px;
+    top: 22px;
+    line-height: 35px;
+    left: 909px;
+    font-family: "Ibarra Real Nova", serif;
+    color: #59606d;
+    font-size: 20px;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  section#mid-page {
+    top: 594px;
+    .mid-title {
+      h2 {
+        width: 173px;
+        padding: 34px 25px;
+        font-size: 15px;
+        letter-spacing: 1px;
+      }
+    }
+    .mid-text {
+      width: 187px;
+      top: 6px;
+      line-height: 15px;
+      left: 197px;
+      font-size: 10px;
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  section#mid-page {
+    top: 594px;
+    .mid-title {
+      h2 {
+        width: 173px;
+        padding: 34px 25px;
+        font-size: 15px;
+        letter-spacing: 1px;
+      }
+    }
+    .mid-text {
+      width: 187px;
+      top: 6px;
+      line-height: 15px;
+      left: 197px;
+      font-size: 10px;
+      padding: 0;
+    }
+  }
+}
+
+section#container-suggest {
+  position: relative;
+  top: 220px;
+
+  h2 {
+    font-family: "Ibarra Real Nova", serif;
+    color: #70acb1;
+    text-shadow: 1px 1px 2px #59606d;
+    padding: 10px;
+    font-size: 25px;
+  }
+  div#suggested-hotels {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  section#container-suggest {
+    top: 190px;
+
+    h2 {
+      padding: 10px;
+      font-size: 15px;
+    }
+    div#suggested-hotels {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      padding: 30px;
+    }
+  }
+}

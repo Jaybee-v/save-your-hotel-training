@@ -1,0 +1,114 @@
+<div class="options-selection">
+  <h3>Cet hôtel propose différentes formules:</h3>
+  <div class="options-choice">
+    <div>
+      <input
+        type="radio"
+        name="pension-choice"
+        id="half-pension"
+        [value]="hotel.pricePerNight"
+        [(ngModel)]="pensionChoice"
+        checked
+      />
+      <label for="half-pension">Demi-pension</label>
+    </div>
+    <div>
+      <input
+        type="radio"
+        name="pension-choice"
+        id="complete-pension"
+        [value]="hotel.completePension"
+        [(ngModel)]="pensionChoice"
+      />
+      <label for="complete-pension">Pension complète </label>
+    </div>
+    <div>
+      <input
+        type="radio"
+        name="pension-choice"
+        id="only-breakfast"
+        [value]="hotel.onlyBreakfast"
+        [(ngModel)]="pensionChoice"
+      />
+      <label for="only-breakfast">Petit déjeuner uniquement </label>
+    </div>
+  </div>
+  <div class="days-number">
+    <label for="">Combien de temps souhaitez vous y séjouner ?</label>
+    <select name="days" id="days" [(ngModel)]="days">
+      <option value="1" selected>1 jours</option>
+      <option value="2">2 jours</option>
+      <option value="3">3 jours</option>
+      <option value="4">4 jours</option>
+    </select>
+  </div>
+</div>
+
+<div class="final-price">
+  <p class="phrase">
+    Votre prix pour un séjour de {{ days }} jours
+    <span *ngIf="pensionChoice == hotel.pricePerNight; else nothing"
+      >en demi-pension</span
+    >
+    <span *ngIf="pensionChoice == hotel.completePension; else nothing"
+      >en pension complète</span
+    >
+    <span *ngIf="pensionChoice == hotel.onlyBreakfast; else nothing"
+      >avec uniquement petit déjeuner</span
+    >
+  </p>
+  <p class="prices">{{ startPrice * days }} €</p>
+  <p class="persons">
+    la nuit pour {{ hotel.numberPersons }} personnes en chambre
+  </p>
+  <div class="free-rooms" *ngIf="hotel.freeRooms == 1">
+    Ne perdez pas de temps, il s'agit de notre dernière chambre disponible !
+  </div>
+  <div class="free-rooms" *ngIf="hotel.freeRooms == 2">
+    Ne perdez pas de temps, il ne nous reste chambres que
+    {{ hotel.freeRooms }} disponibles.
+  </div>
+</div>
+
+<ng-template #nothing>
+  <span> </span>
+</ng-template>
+
+<div id="reserve-btn">
+  <button (click)="hotelListService.showAlert = true">
+    Réserver maintenant
+  </button>
+</div>
+
+<div id="container-alert" *ngIf="hotelListService.showAlert">
+  <div id="container">
+    <div id="header">Êtes-vous certain de votre choix ?</div>
+    <div id="content">
+      Séjour de {{ days }} <span *ngIf="days == 1; else more">jour</span> à
+      l'hôtel {{ hotel.hotelName }} pour un total de {{ startPrice * days }} €
+      <span *ngIf="pensionChoice == hotel.pricePerNight; else nothing"
+        >en demi-pension</span
+      >
+      <span *ngIf="pensionChoice == hotel.completePension; else nothing"
+        >en pension complète</span
+      >
+      <span *ngIf="pensionChoice == hotel.onlyBreakfast; else nothing"
+        >avec uniquement petit déjeuner</span
+      >
+    </div>
+    <ng-template #more>
+      <span>jours</span>
+    </ng-template>
+    <div id="actions">
+      <button (click)="hotelListService.showAlert = false" class="cancel">
+        Non
+      </button>
+      <button
+        class="confirm"
+        (click)="hotelListService.showAlert = false && acceptPaiment()"
+      >
+        Payer
+      </button>
+    </div>
+  </div>
+</div>

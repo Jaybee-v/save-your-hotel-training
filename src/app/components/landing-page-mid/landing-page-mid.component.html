@@ -1,0 +1,26 @@
+<section id="mid-page">
+  <div class="mid-title">
+    <h2>
+      Ce que vous cherchez, <br />
+      vous le trouverez ici.
+    </h2>
+  </div>
+  <div class="mid-text">
+    Nous avons référencés pour vous, les meilleurs hôtels dans différents pays.
+    De l'hôtel de charme au palace luxueux, de l'éveil des sens en passant par
+    la farniente, venez découvrir ces hôtels tous plus magiques les uns que les
+    autres !
+  </div>
+</section>
+
+<section id="container-suggest">
+  <h2>
+    Réservation de dernière minute ? Nous avons quelques suggestions pour vous :
+  </h2>
+  <div id="suggested-hotels">
+    <app-landing-page-hotels-suggest
+      *ngFor="let hotel of hotels"
+      [hotel]="hotel"
+    ></app-landing-page-hotels-suggest>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+<section id="container">
+  <div id="container-view">
+    <div class="title-accroche">
+      <div class="blur">
+        <img [src]="hotel.imageUrl" alt="" />
+      </div>
+      <div class="title">
+        <h2>{{ hotel.hotelName }}</h2>
+        <app-star-rating [rating]="hotel.rating"></app-star-rating>
+      </div>
+      <div class="location">
+        <p>Hôtel situé à {{ hotel.location }}</p>
+      </div>
+      <div class="accroche">
+        {{ hotel.smallDescription }}
+      </div>
+    </div>
+    <div class="description">
+      {{ hotel.description }}
+    </div>
+  </div>
+
+  <div id="services">
+    <app-hotel-single-view-services></app-hotel-single-view-services>
+  </div>
+</section>
+<div class="footer">
+  <app-footer></app-footer>
+</div>

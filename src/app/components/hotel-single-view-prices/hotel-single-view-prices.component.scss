@@ -1,0 +1,231 @@
+div.options-selection {
+  padding: 20px;
+  h3 {
+    font-family: "Alex Brush", cursive;
+    font-size: 35px;
+  }
+  .options-choice {
+    font-family: "Ibarra Real Nova", serif;
+    margin-top: 10px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    div {
+      width: 500px;
+      label {
+        font-size: 20px;
+        padding: 10px;
+      }
+    }
+  }
+  .days-number {
+    display: flex;
+    flex-direction: column;
+    select {
+      border-radius: 5px;
+      color: white;
+      font-size: 20px;
+      background-color: #70acb1;
+      border: none;
+      padding: 10px;
+      width: fit-content;
+      margin-left: 50%;
+      transform: translate(-50%);
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  div.options-selection {
+    padding: 20px;
+    h3 {
+      font-size: 24px;
+    }
+    .options-choice {
+      margin-top: 10px;
+      div {
+        width: 300px;
+        label {
+          font-size: 15px;
+          padding: 10px;
+        }
+      }
+    }
+    .days-number {
+      select {
+        font-size: 15px;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+div.final-price {
+  position: absolute;
+  font-family: "Ibarra Real Nova", serif;
+  font-size: 20px;
+  width: max-content;
+  font-weight: 700;
+  .phrase {
+    color: #70acb1;
+    margin-left: 80px;
+  }
+  .prices {
+    font-family: "Alex Brush", cursive;
+    color: #88d73c;
+    font-weight: 900;
+    font-size: 45px;
+    position: relative;
+    left: 400px;
+    top: 14px;
+  }
+  .persons {
+    color: #70acb1;
+    position: relative;
+    left: 454px;
+    top: 15px;
+    font-size: 15px;
+  }
+  .free-rooms {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 50px;
+    border: 2px solid red;
+    width: fit-content;
+    padding: 10px;
+    color: red;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  div.final-price {
+    font-size: 15px;
+    .phrase {
+      display: flex;
+      flex-direction: column;
+      margin-left: 60px;
+    }
+    .prices {
+      font-size: 45px;
+      left: 150px;
+      top: 0px;
+    }
+    .persons {
+      left: 144px;
+      top: -5px;
+      font-size: 12px;
+    }
+  }
+}
+
+#container-alert {
+  display: flex;
+  position: fixed;
+  overflow-y: hidden;
+  top: -395px;
+  right: -443px;
+  width: 100vw;
+  height: 120vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  #container {
+    position: absolute;
+    width: 40%;
+    height: 250px;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    top: 40%;
+    left: 30%;
+    border: 2px solid #70acb1;
+    #header {
+      border-bottom: 1px solid #ccc;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+      padding-right: 30px;
+      font-size: 20px;
+    }
+    #content {
+      flex-grow: 1;
+      padding: 30px;
+      font-size: 15px;
+    }
+    #actions {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 40px;
+      gap: 20px;
+      padding: 30px;
+      button {
+        padding: 10px 30px;
+        border-radius: 10px;
+        font-family: "Ibarra Real Nova", serif;
+        font-weight: 700;
+        font-size: 25px;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+      }
+      .confirm {
+        border: 3px solid #59606d;
+        color: #59606d;
+        background-color: #88d73c;
+        &:hover {
+          background-color: red;
+          color: white;
+        }
+      }
+      .cancel {
+        background-color: #59606d;
+        color: #70acb1;
+        border: 3px solid #70acb1;
+        &:hover {
+          background-color: orange;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+#reserve-btn {
+  button {
+    position: relative;
+    bottom: -163px;
+    right: -262px;
+    font-family: "Ibarra Real Nova", serif;
+    font-weight: 900;
+    border: none;
+    background-color: #59606d;
+    color: #70acb1;
+    border-radius: 5px 15px 5px 15px;
+    letter-spacing: 1px;
+    margin: 20px 0 10px 0;
+    padding: 10px 70px;
+    font-size: 25px;
+    transition: 0.2s ease-in-out;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+      background-color: #70acb1;
+      color: #59606d;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #reserve-btn {
+    button {
+      bottom: -125px;
+      right: 25px;
+      margin: 20px 0 10px 61px;
+      padding: 10px 30px;
+      font-size: 20px;
+    }
+  }
+}

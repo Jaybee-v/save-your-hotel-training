@@ -1,0 +1,15 @@
+<div class="hotel-card">
+  <a (click)="selectedHotel()">
+    <div class="card">
+      <img src="{{ hotel.imageUrl }}" [title]="hotel.hotelName" alt="" />
+      <h5>{{ hotel.hotelName }}</h5>
+      <p>
+        à <strong>{{ hotel.location }}</strong>
+      </p>
+
+      <app-star-rating [rating]="hotel.rating"></app-star-rating>
+
+      <button>Découvrir</button>
+    </div>
+  </a>
+</div>

@@ -1,0 +1,78 @@
+.hotel-card {
+  border: 2px solid #70acb1;
+  border-radius: 5px;
+  width: 250px;
+  margin-right: 20px;
+  transition: 0.2s ease-in;
+  margin-bottom: 50px;
+  &:hover {
+    box-shadow: 2px 2px 5px #59606d, 0 0 5px #59606d;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    img {
+      border-radius: 10px 10px 0 0;
+      width: 250px;
+      height: 150px;
+      padding: 10px;
+    }
+    h5 {
+      font-size: 25px;
+      font-family: "Alex Brush", cursive;
+      letter-spacing: 1px;
+      color: #59606d;
+    }
+    p {
+      padding: 5px;
+      font-family: "Ibarra Real Nova", serif;
+      font-size: 13px;
+    }
+    button {
+      font-family: "Ibarra Real Nova", serif;
+      font-weight: 900;
+      border: none;
+      background-color: #59606d;
+      color: #70acb1;
+      border-radius: 5px 15px 5px 15px;
+      letter-spacing: 1px;
+      margin: 20px 0 10px 0;
+      padding: 10px 70px;
+      font-size: 15px;
+      transition: 0.4s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        background-color: #70acb1;
+        color: #59606d;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hotel-card {
+    width: 115px;
+    margin-right: 5px;
+    .card {
+      img {
+        width: 115px;
+        height: 100px;
+        padding: 3px;
+      }
+      h5 {
+        font-size: 19px;
+      }
+      p {
+        font-size: 11px;
+      }
+      button {
+        margin: 10px 0 10px 0;
+        padding: 8px 20px;
+        font-size: 11px;
+      }
+    }
+  }
+}

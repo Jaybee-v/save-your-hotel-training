@@ -1,0 +1,26 @@
+<a (click)="selectedHotel()"
+  ><div class="card" *ngIf="hotel.freeRooms > 0">
+    <div class="image-url">
+      <img src="{{ hotel.imageUrl }}" alt="" />
+    </div>
+    <div class="hotel-info">
+      <h3>{{ hotel.hotelName }}</h3>
+      <app-star-rating [rating]="hotel.rating"></app-star-rating>
+      <p>à {{ hotel.location }}</p>
+      <p>{{ hotel.hotelCountry | uppercase }}</p>
+    </div>
+    <div class="hotel-price">
+      <p>
+        à partir de <span>{{ hotel.onlyBreakfast }}</span> €
+      </p>
+    </div>
+    <div *ngIf="hotel.freeRooms == 1; else last" class="last-room">
+      <i class="fa-solid fa-triangle-exclamation"></i> dernière chambre
+      disponible
+    </div>
+    <ng-template #last>
+      <div class="last-room" style="visibility: hidden">a</div>
+    </ng-template>
+    <button>Découvrir</button>
+  </div>
+</a>

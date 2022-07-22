@@ -1,0 +1,48 @@
+<div id="container">
+  <h2>{{ title }}</h2>
+  <div class="presentation">
+    <h4>Petite présentation de notre entreprise :</h4>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas similique
+      deleniti, fugiat repellat cum repudiandae optio expedita fugit laudantium
+      numquam perspiciatis, ipsa doloribus hic alias iusto quia in aperiam
+      molestiae autem. Eveniet, totam corporis voluptatem eaque illo rerum
+      temporibus magni eligendi corrupti facilis veritatis debitis. Libero
+      dignissimos pariatur, esse quaerat commodi assumenda, nulla est ea dolore
+      quo id similique qui sunt sequi! Dolores atque culpa quos sed maiores fuga
+      ut enim minima illo nihil rerum perspiciatis repellat cum, quam earum,
+      velit ipsam! Sint consectetur neque molestias iure iste? Facere, amet et?
+      Nulla iste saepe cupiditate sint perferendis labore ipsa, blanditiis quia
+      molestias quam in aspernatur! Tempora sequi nihil vel? Asperiores sint
+      tempore, adipisci deserunt quam cum velit quaerat ipsa accusantium neque
+      pariatur explicabo facere aperiam veritatis expedita officia nostrum nihil
+      ullam voluptatum atque dolor vitae, consequuntur consectetur? Aspernatur
+      libero quod facilis voluptatibus minima laboriosam pariatur earum magni
+      deserunt vel omnis, aut molestiae eligendi perferendis quos veritatis ut?
+      Sint saepe aspernatur earum amet veritatis rem unde, ad fugit neque vero
+      repellat quas aliquid ipsam accusantium provident optio dolore
+      voluptatibus consequuntur fuga!
+    </p>
+  </div>
+
+  <div class="team">
+    <h2>Notre équipe</h2>
+    <div class="team-card" *ngFor="let worker of workers" [title]="worker.name">
+      <div class="name">
+        {{ worker.name }}
+      </div>
+      <div class="photo">
+        <img [src]="worker.photo" alt="" />
+      </div>
+      <div class="job">
+        {{ worker.job }}
+      </div>
+      <div class="description">
+        {{ worker.name }} en quelques mots :
+        <p>{{ worker.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

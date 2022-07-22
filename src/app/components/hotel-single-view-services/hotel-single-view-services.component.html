@@ -1,0 +1,15 @@
+<div id="services">
+  <div class="title">
+    Services proposés
+    <p>(certains services proposés implique un supplément)</p>
+  </div>
+  <div class="services">
+    <p *ngFor="let service of hotelServices">
+      {{ service }}
+    </p>
+  </div>
+</div>
+
+<div id="prices">
+  <app-hotel-single-view-prices></app-hotel-single-view-prices>
+</div>

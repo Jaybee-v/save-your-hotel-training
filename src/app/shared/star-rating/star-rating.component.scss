@@ -1,0 +1,28 @@
+.star-container {
+  overflow: hidden;
+  cursor: pointer;
+  .star-wrapper {
+    width: 125px;
+    cursor: pointer;
+
+    i {
+      padding: 0;
+      width: 25px;
+      color: #ffd700;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .star-container {
+    overflow: hidden;
+    cursor: pointer;
+    .star-wrapper {
+      width: 100px;
+      i {
+        padding: 0;
+        width: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Julien",
+    "job": "CEO",
+    "photo": "../assets/avatar/homme2.png",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, dolorum tempora distinctio numquam iure asperiores magni sunt reiciendis sequi id!"
+  },
+  {
+    "name": "Eric",
+    "job": "Développeur Web",
+    "photo": "../assets/avatar/homme1.png",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, dolorum tempora distinctio numquam iure asperiores magni sunt reiciendis sequi id!"
+  },
+  {
+    "name": "Célia",
+    "job": "Chasseuse d'Hôtel",
+    "photo": "../assets/avatar/femme1.png",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, dolorum tempora distinctio numquam iure asperiores magni sunt reiciendis sequi id!"
+  },
+  {
+    "name": "Jude",
+    "job": "Chasseuse d'Hôtel",
+    "photo": "../assets/avatar/femme2.png",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, dolorum tempora distinctio numquam iure asperiores magni sunt reiciendis sequi id!"
+  }
+]

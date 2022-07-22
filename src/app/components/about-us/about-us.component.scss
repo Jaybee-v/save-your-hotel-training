@@ -1,0 +1,95 @@
+div#container {
+  h2 {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    font-family: "Alex Brush", cursive;
+    font-size: 65px;
+    letter-spacing: 4px;
+    word-spacing: 15px;
+    color: #88d73c;
+    text-shadow: 2px 2px 3px #59606d;
+  }
+  .presentation {
+    border: 2px solid #70acb1;
+    font-family: "Ibarra Real Nova", serif;
+    width: 850px;
+    padding: 25px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    h4 {
+      font-size: 35px;
+      padding: 20px;
+      color: #70acb1;
+    }
+    p {
+      line-height: 25px;
+    }
+  }
+  .team {
+    h2 {
+      font-size: 50px;
+    }
+    .team-card {
+      font-family: "Ibarra Real Nova", serif;
+      width: fit-content;
+      display: flex;
+      margin-left: 50%;
+      transform: translate(-50%);
+      align-items: center;
+      flex-direction: column;
+      border: 2px solid #88d73c;
+      margin-bottom: 20px;
+      padding: 20px;
+
+      .name {
+        font-size: 35px;
+        font-weight: 700;
+        padding: 10px;
+      }
+      .photo {
+        img {
+          width: 300px;
+          height: 320px;
+          border-radius: 50px;
+        }
+      }
+      .job {
+        padding: 10px;
+        font-size: 28px;
+        font-weight: 500;
+      }
+      .description {
+        font-size: 20px;
+        p {
+          font-size: 17px;
+          width: 200px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  div#container {
+    h2 {
+      padding: 35px;
+      font-size: 35px;
+    }
+    .presentation {
+      width: 350px;
+      padding: 12px;
+      margin-left: 50%;
+      transform: translate(-50%);
+      h4 {
+        font-size: 17px;
+        padding: 20px;
+        color: #70acb1;
+      }
+      p {
+        line-height: 20px;
+      }
+    }
+  }
+}

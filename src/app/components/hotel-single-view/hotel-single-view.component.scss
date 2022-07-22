@@ -1,0 +1,105 @@
+section#container {
+  display: grid;
+  grid-template-columns: 10% 25% 7.5% 50%;
+
+  div#container-view {
+    grid-column-start: 2;
+    margin-top: 60px;
+
+    font-family: "Ibarra Real Nova", serif;
+    width: fit-content;
+    border: 3px solid #70acb1;
+    .title-accroche {
+      padding: 20px;
+      background-color: rgba(44, 44, 44, 0.735);
+      .blur {
+        opacity: 0.2;
+        position: absolute;
+        left: 195px;
+        top: 141px;
+        img {
+          width: 499px;
+          height: 306px;
+        }
+      }
+      .title {
+        padding: 25px;
+        h2 {
+          font-size: 40px;
+          font-weight: 900;
+          font-family: "Alex Brush", cursive;
+          letter-spacing: 2px;
+          color: #70acb1;
+        }
+      }
+      .location {
+        p {
+          color: #88d73c;
+          font-weight: 500;
+        }
+      }
+      .accroche {
+        width: 380px;
+        font-size: 20px;
+        margin-top: 20px;
+        line-height: 35px;
+        color: white;
+        font-weight: 600;
+      }
+    }
+    .description {
+      padding: 20px;
+      width: 500px;
+      line-height: 30px;
+    }
+  }
+  div#services {
+    grid-column-start: 4;
+    margin-top: 60px;
+    border: 3px solid #59606d;
+    border-radius: 5px 85px 5px 85px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  section#container {
+    grid-template-columns: repeat(1, 1fr);
+
+    div#container-view {
+      margin-top: 30px;
+      margin-left: 13px;
+      .title-accroche {
+        .blur {
+          left: 17px;
+          top: 112px;
+          img {
+            width: 338px;
+            height: 294px;
+          }
+        }
+        .title {
+          h2 {
+            font-size: 35px;
+          }
+        }
+        .accroche {
+          width: 300px;
+          font-size: 15px;
+        }
+      }
+      .description {
+        font-size: 12px;
+        width: 340px;
+        line-height: 20px;
+      }
+    }
+    div#services {
+      position: relative;
+      top: 662px;
+      left: -345px;
+    }
+  }
+  .footer {
+    margin-top: 550px;
+  }
+}

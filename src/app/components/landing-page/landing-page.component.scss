@@ -1,0 +1,183 @@
+section#container-landingpage {
+  display: grid;
+  grid-template-columns: 15% 30% 10% 40% 5%;
+  div#title {
+    grid-column-start: 2;
+    position: relative;
+    top: 70px;
+    font-family: "Ibarra Real Nova", serif;
+    h2 {
+      font-size: 35px;
+      width: 200px;
+      line-height: 1.6em;
+      color: #70acb1;
+    }
+    h3 {
+      position: relative;
+      top: -78px;
+      left: 42px;
+      font-family: "Alex Brush", cursive;
+      letter-spacing: 3px;
+      font-size: 40px;
+      color: #88d73c;
+    }
+    .rapid-go {
+      position: relative;
+      top: 60px;
+      color: #fff;
+      background-color: #88d73c;
+      border-radius: 20px 3px 20px 3px;
+      padding: 10px 80px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+  }
+  div#image {
+    grid-column-start: 4;
+    position: relative;
+    margin-bottom: 1px;
+    img {
+      margin-top: 10px;
+      width: 580px;
+    }
+    .trait {
+      content: " ";
+      background-color: #fff;
+      position: absolute;
+      z-index: 3;
+    }
+    .trait.one {
+      height: 59px;
+      width: 252px;
+      left: -1px;
+      margin-top: 10px;
+      border: none;
+    }
+    .trait.two {
+      height: 70px;
+      transform: rotate(90deg);
+      width: 200px;
+      left: -66px;
+      margin-top: 309px;
+    }
+    .trait.three {
+      height: 6px;
+      width: 289px;
+      left: -1px;
+      margin-top: 240px;
+    }
+    .trait.four {
+      height: 6px;
+      transform: rotate(90deg);
+      width: 230px;
+      left: 138px;
+      margin-top: 122px;
+    }
+    .trait.five {
+      height: 59px;
+      width: 294px;
+      left: 287px;
+      margin-top: 385px;
+    }
+    .trait.six {
+      height: 6px;
+      transform: rotate(90deg);
+      width: 222px;
+
+      left: 174px;
+      margin-top: 330px;
+    }
+    .trait.seven {
+      height: 45px;
+      transform: rotate(90deg);
+      width: 212px;
+      left: 454px;
+      margin-top: 92px;
+    }
+    .trait.eight {
+      height: 6px;
+      width: 331px;
+      left: 251px;
+      margin-top: 220px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section#container-landingpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    div#title {
+      top: 30px;
+      h2 {
+        font-size: 20px;
+        width: 110px;
+        line-height: 1.6em;
+        color: #70acb1;
+      }
+      h3 {
+        top: -44px;
+        font-size: 20px;
+      }
+      p {
+        font-size: 15px;
+      }
+      .rapid-go {
+        top: 10px;
+      }
+    }
+    div#image {
+      position: relative;
+      top: 80px;
+      img {
+        width: 350px;
+      }
+      .trait.one {
+        height: 40px;
+        width: 165px;
+      }
+      .trait.two {
+        height: 42px;
+        width: 107px;
+        left: -33px;
+        margin-top: 199px;
+      }
+      .trait.three {
+        width: 202px;
+        margin-top: 166px;
+      }
+      .trait.four {
+        width: 159px;
+        left: 86px;
+        margin-top: 87px;
+      }
+      .trait.five {
+        height: 38px;
+        width: 149px;
+        left: 202px;
+        margin-top: 235px;
+      }
+      .trait.six {
+        width: 123px;
+        left: 138px;
+        margin-top: 209px;
+      }
+      .trait.seven {
+        height: 30px;
+        width: 148px;
+        left: 261px;
+        margin-top: 56px;
+      }
+      .trait.eight {
+        width: 187px;
+        left: 163px;
+        margin-top: 145px;
+      }
+      .trait.light {
+        height: 5px;
+      }
+    }
+  }
+}
